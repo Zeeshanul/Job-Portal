@@ -4,6 +4,33 @@
 in order to get the link go to the github and click on clone or download option, there you will get the link
 
 Pushing:
+first we have to commit 
 1- git status
 2- git add / git add -A
-3- git commit "first upload project on gitHub" / git commit -a
+3- git commit "first upload project on gitHub" / git commit -a -m "comments"
+
+then we will push it 
+1- using ssh to connect with the central repository we need to generate an ssh key
+1.1 run ssh-keygen
+1.1.2 it will be stored in the a file that we will specify 
+1.1.3 cat "file location" wil give us the key
+1.1.4 copy and paaste it into the deploy key add path.
+1.1.5 run git@github.com
+1.1.6 git push origin master/first-branch
+
+2- Add that key to github account
+3-now we can start pushing chnages 
+Branching
+1-git bracnh first-branch
+2-git checkout first-branch
+
+Merging
+1-checkout out into destination branch 
+2-git merge first-branch
+
+Rebasing
+Another king of merging
+it gives us a cleaner workflow
+it helps us to reduce number of branches by placing the new bracnh at the tip of the master branch 
+1- move into destination branch
+2- git rebase source-branch
